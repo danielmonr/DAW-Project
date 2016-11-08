@@ -57,6 +57,7 @@ else{
   echo "Failed to register. :C";
 }
 mysqli_close($dbc);
-return json;
+
+
 
 ?>
