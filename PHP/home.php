@@ -8,7 +8,7 @@
 </head>
 <body>
   <?php
-    $user_id = $_SESSION['login_user']
+    $user_id = $_SESSION['login_user'];
     print $user_id;
    ?>
 </body>
