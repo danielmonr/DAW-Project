@@ -45,6 +45,7 @@ else{
 
 if(!$valid){
   print ($errors);
+  exit(0);
 }
 
 $query = "INSERT INTO Users (name, lastname, password, email) values ('$username', '$lastname', '$password', '$email')";
