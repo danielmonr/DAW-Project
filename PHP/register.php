@@ -43,7 +43,9 @@ else{
   $errors = $errors . "Please fill the Name field.<br/>";
 }
 
-
+if(!$valid){
+  print ($errors);
+}
 
 $query = "INSERT INTO Users (name, lastname, password, email) values ('$username', '$lastname', '$password', '$email')";
 $inserted = mysqli_query($dbc, $query);
