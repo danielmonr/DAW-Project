@@ -4,7 +4,7 @@
 
   if (isset($_POST['submit'])) {
     if ($_POST['username'] == "mike@m.com" &&
-        $_POST['password'] == "1234") {
+        $_POST['password'] == "1234")
       $_SESSION['logged'] = 1;
-    echo "Login<br>";      
+    echo "Login<br>";
 ?>
