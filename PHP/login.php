@@ -26,35 +26,9 @@ if ($result->num_rows > 0) {
     // output data of each row
     $user = $result->fetch_assoc();
     $_SESSION['login_user'] = $user["id"];
-    header("location: welcome.php");
+    header("location: ../HTML/home.html");
 } else {
     print ("Invalid username or password<br/>");
-    header("location: welcome.php");
+    header("location: ../HTML/login.html");
 }
-
-
-   print ("acabo<br/>");
-
-
-
-
-   /*if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form
-
-      $myusername = mysqli_real_escape_string($dbc,$_POST['username']);
-      $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
-
-      $sql = "SELECT id FROM Users WHERE email = $myusername' and password = '$mypassword'";
-
-      $result = $dbc->query($sql);
-
-      if($result->num_rows > 0) {
-         session_register("myusername");
-         $_SESSION['login_user'] = $myusername;
-
-         header("location: welcome.php");
-      }else {
-         $error = "Your Login Name or Password is invalid";
-      }
-   }*/
 ?>

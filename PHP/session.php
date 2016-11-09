@@ -4,15 +4,17 @@
     $dbc = $db->Connect();
     session_start();
 
-    $usuario_conectado = $_SESSION['login_user'];
-    
-    $sql = mysqli_query($dbc,"SELECT email from Users WHERE username = '$usuario_conectado' ");
+    if(!isset($_SESSION['login_user'])){
+        header("location: ../HTML/login.html");
+    }
+
+    $user_id = $_SESSION['login_user'];
+
+    $sql = mysqli_query($dbc,"SELECT name from Users WHERE id = '$user_id' ");
 
     $row = mysqli_fetch_array($sql, MYSQLI_ASSOC);
 
-    $login_session = $row['username'];
-       
-    if(!isset($_SESSION['login_user'])){
-        header("location:login.php");
-    }
+    $name_logged = $row['name'];
+
+
 ?>
