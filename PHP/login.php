@@ -19,7 +19,7 @@
    $myusername = mysqli_real_escape_string($dbc,$_POST['username']);
    print($myusername);
    $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
-   $sql = "SELECT * FROM Users WHERE email = $myusername' and password = '$mypassword'";
+   $sql = "SELECT * FROM Users WHERE email = '$myusername' and password = '$mypassword'";
    print("<br/>".$sql . "<br/>");
    $result = $dbc->query($sql);
 
