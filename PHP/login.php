@@ -24,7 +24,7 @@
 
    print ("acabo<br/>");
 
-   print ($result);
+   print ($result->fetch_array());
 
 
    /*if($_SERVER["REQUEST_METHOD"] == "POST") {
