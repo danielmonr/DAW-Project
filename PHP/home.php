@@ -95,8 +95,8 @@
         print ("<p>" . $row["name"] . " " . $row["lastname"] . " </p>");
         print ("</div>");
         print ("<div class='well'>");
-        print ("<p>" . $row["email"]; . " </p>");
-        print ("</div>");        
+        print ("<p>" . $row["email"] . " </p>");
+        print ("</div>");
 
        ?>
     </div>
