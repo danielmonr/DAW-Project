@@ -21,10 +21,12 @@
    $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
    $sql = "SELECT * FROM Users WHERE email = $myusername' and password = '$mypassword'";
    $result = mysqli_query($dbc, $sql);
+   $res = $result->fetch_array();
+
 
    print ("acabo<br/>");
 
-   print ($result->fetch_array());
+   print (res[0]);
 
 
    /*if($_SERVER["REQUEST_METHOD"] == "POST") {
