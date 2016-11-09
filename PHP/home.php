@@ -20,7 +20,7 @@
     print $row["name"];
     print $row["lastname"];
     print $row["email"];
-    print ("<img src='../PHP/RES/".$row["profilepic"]."'/>");
+    print ("<img src='../RES/PP/".$row["profilepic"]."'/>");
 
    ?>
 
