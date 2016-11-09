@@ -52,7 +52,7 @@ $copy = false;
 if (isset($_POST['image'])){
   $image = $_POST['image'];
   if (is_uploaded_file ($_FILES['image']['tmp_name'])){
-    $directory = "../RES/IMG/";
+    $directory = "../RES/PP/";
     $diff = time();
     $filename = $diff . "_" . $_FILES['image']['name'];
     $copy = true;
