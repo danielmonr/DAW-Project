@@ -26,7 +26,7 @@ if ($result->num_rows > 0) {
     // output data of each row
     $user = $result->fetch_assoc();
     $_SESSION['login_user'] = $user["id"];
-    header("location: ../HTML/home.html");
+    header("location: home.php");
 } else {
     print ("Invalid username or password<br/>");
     header("location: ../HTML/login.html");
