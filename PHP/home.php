@@ -52,7 +52,7 @@ $row = $result->fetch_assoc();
         <div class="row content">
             <div class="col-sm-2 sidenav">
                 <?php
-                print ("<img src='../RES/PP/".$row["profilepic"]."' height='50%' width='100%' />");
+                print ("<img class='img-circle' src='../RES/PP/".$row["profilepic"]."' height='50%' width='100%' />");
                 ?>
             </div>
             <div class="col-sm-8 text-left">
