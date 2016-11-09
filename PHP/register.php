@@ -49,15 +49,14 @@ if(!$valid){
 }
 
 $copy = false;
-if (isset($_POST['image'])){
-  print("se econtro imagen<br>");
+
   $image = $_POST['image'];
   if (is_uploaded_file ($_FILES['image']['tmp_name'])){
+      print("se econtro imagen<br>");
     $directory = "../RES/PP/";
     $diff = time();
     $filename = $diff . "_" . $_FILES['image']['name'];
     $copy = true;
-  }
 }
 
 print($filename . "<br>");
