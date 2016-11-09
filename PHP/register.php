@@ -50,7 +50,7 @@ if(!$valid){
 
 $copy = false;
 if (isset($_POST['image'])){
-  print("se econtro imagen<br>")
+  print("se econtro imagen<br>");
   $image = $_POST['image'];
   if (is_uploaded_file ($_FILES['image']['tmp_name'])){
     $directory = "../RES/PP/";
