@@ -4,6 +4,8 @@
     $dbc = $db->Connect();
     session_start();
 
+    print("Se está corriendo<br/>");
+
     if(!isset($_SESSION['login_user'])){
         header("location: ../HTML/login.html");
     }
