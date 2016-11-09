@@ -49,15 +49,17 @@ if(!$valid){
 }
 
 $copy = false;
-if (isset($_POST['image'])){
+
   $image = $_POST['image'];
   if (is_uploaded_file ($_FILES['image']['tmp_name'])){
+      print("se econtro imagen<br>");
     $directory = "../RES/PP/";
     $diff = time();
     $filename = $diff . "_" . $_FILES['image']['name'];
     $copy = true;
-  }
 }
+
+print($filename . "<br>");
 
 if ($copy){
   move_uploaded_file ($_FILES['image']['tmp_name'], $directory . $filename);
@@ -70,7 +72,7 @@ $query = "INSERT INTO Users (name, lastname, password, email, profilepic) values
 $inserted = mysqli_query($dbc, $query);
 if ($inserted == 1){
   echo "Success, user registered!";
-  header("location: home.php");
+  //header("location: ../HTML/login.html");
 }
 else{
   echo "Failed to register. :C";
