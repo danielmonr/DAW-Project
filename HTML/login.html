@@ -12,20 +12,29 @@
 </head>
 
 <body>
-
+    <br>
+    <br>
     <div class="container">
-
+      <div class="col-md-3"></div>
+      <div class = "col-md-6">
         <form class="form-signin" action="../PHP/login.php" method="post">
             <h2 class="form-signin-heading">Please sign in</h2>
+            <hr>
+            <br>
             <input type="hidden" name="redirect" value="<?php echo $_POST['redirect']; ?>">
             <label for="inputEmail" class="sr-only">Email address</label>
             <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="username" required autofocus>
+            <br>
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
-            <input type="submit" class="btn btn-lg btn-primary btn-block" />Sign in
+            <br>
+            <br>
+            <input type="submit" class="btn btn-lg btn-primary btn-block" />
+            <br>
+            <a href="register.html" class="btn btn-lg btn-primary btn-block">Register</a>
             <br/>
         </form>
-
+      </div>
     </div>
 </body>
 </html>
