@@ -3,6 +3,13 @@
    include_once('DBConnection.php');
    $db = new DBConnection();
    $dbc = $db->Connect();
+
+   $user_id = $_SESSION['login_user'];
+   $sql = "SELECT name, lastname, email, profilepic FROM Users WHERE id = $user_id";
+   $result = $dbc->query($sql);
+   print $user_id;
+
+   $row = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -67,7 +74,7 @@
         <li><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
       </ul>
     </div>
   </div>
@@ -76,6 +83,9 @@
 <div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-2 sidenav">
+        <?php
+            print ("<img src='../RES/PP/".$row["profilepic"]."'/>");
+        ?>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
       <p><a href="#">Link</a></p>
@@ -83,16 +93,10 @@
     <div class="col-sm-8 text-left">
       <h1>Welcome</h1>
       <?php
-        $user_id = $_SESSION['login_user'];
-        $sql = "SELECT name, lastname, email, profilepic FROM Users WHERE id = $user_id";
-        $result = $dbc->query($sql);
-        print $user_id;
 
-        $row = $result->fetch_assoc();
         print $row["name"];
         print $row["lastname"];
         print $row["email"];
-        print ("<img src='../RES/PP/".$row["profilepic"]."'/>");
 
        ?>
     </div>
