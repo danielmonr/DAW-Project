@@ -84,7 +84,7 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
         <?php
-            print ("<img src='../RES/PP/".$row["profilepic"]."' height="10%" width="10%"/>");
+            print ("<img src='../RES/PP/".$row["profilepic"]."' height='42' width='42' />");
         ?>
     </div>
     <div class="col-sm-8 text-left">
