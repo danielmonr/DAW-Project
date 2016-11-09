@@ -48,10 +48,29 @@ if(!$valid){
   exit(0);
 }
 
-$query = "INSERT INTO Users (name, lastname, password, email) values ('$username', '$lastname', '$password', '$email')";
+$copy = false;
+if (isset($_POST['image'])){
+  $image = $_POST['image'];
+  if (is_uploaded_file ($_FILES['image']['tmp_name'])){
+    $directory = "../RES/IMG/";
+    $diff = time();
+    $filename = $diff . "_" . $_FILES['image']['name'];
+    $copy = true;
+  }
+}
+
+if ($copy){
+  move_uploaded_file ($_FILES['image']['tmp_name'], $directory . $filename);
+}
+else{
+  $filename = "";
+}
+
+$query = "INSERT INTO Users (name, lastname, password, email, profilepic) values ('$username', '$lastname', '$password', '$email', '$filename')";
 $inserted = mysqli_query($dbc, $query);
 if ($inserted == 1){
   echo "Success, user registered!";
+  header("location: home.php");
 }
 else{
   echo "Failed to register. :C";
