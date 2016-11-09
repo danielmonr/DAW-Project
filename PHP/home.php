@@ -100,10 +100,11 @@
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
-        <p>ADS</p>
+        <p>Saldo</p>
+        <p>$100,000</p>
       </div>
       <div class="well">
-        <p>ADS</p>
+        <button type="button" class="btn btn-primary">Transferir</button>
       </div>
     </div>
   </div>
