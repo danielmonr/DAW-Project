@@ -17,7 +17,6 @@
    }
 
    $myusername = mysqli_real_escape_string($dbc,$_POST['username']);
-   print($myusername);
    $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
    $sql = "SELECT * FROM Users WHERE email = '$myusername' and password = '$mypassword'";
    print("<br/>".$sql . "<br/>");
@@ -25,17 +24,18 @@
 
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["lastname"]. "<br>";
-    }
+    $user = $result->fetch_assoc();
+    $_SESSION['login_user'] = $user["id"];
+    header("location: welcome.php");
 } else {
     print ("Invalid username or password<br/>");
+    header("location: welcome.php");
 }
 
 
    print ("acabo<br/>");
 
-   
+
 
 
    /*if($_SERVER["REQUEST_METHOD"] == "POST") {
