@@ -91,8 +91,8 @@
       <h1>Welcome</h1>
       <?php
 
-        print ("<div class=\"well\">");
-        print ("<p>" . $row["name"] . " " . $row["lastname"]; . " </p>");
+        print ("<div class='well'>");
+        print ("<p>" . $row["name"] . " " . $row["lastname"] . " </p>");
         print ("</div>");
         print $row["email"];
 
