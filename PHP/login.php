@@ -6,14 +6,18 @@
 
    $valid = false;
 
+   print("entro");
+
    if (isset($_POST['username']) && isset($_POST['password'])){
      $valid = true;
+     print("valid");
    }
    else{
      print ("Please insert your username and password.<br/>");
    }
 
    $myusername = mysqli_real_escape_string($dbc,$_POST['username']);
+   print($myusername);
    $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
    $sql = "SELECT * FROM Users WHERE email = $myusername' and password = '$mypassword'";
    $result = mysqli_query($dbc, $sql);
