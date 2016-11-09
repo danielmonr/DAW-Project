@@ -70,7 +70,7 @@ $row = $result->fetch_assoc();
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="well">
-                    <p>Saldo</p>
+                    <p><s>Saldo</s></p>
                     <p>$100,000</p>
                 </div>
                 <div class="well">
@@ -81,10 +81,8 @@ $row = $result->fetch_assoc();
     </div>
 
     <footer class="container-fluid text-center">
-        <p>Posted by: Hege Refsnes</p>
-        <p>Contact information: <a href="mailto:someone@example.com">
-            someone@example.com</a>.</p>
-        </footer>
+        <p class="copyright text-muted small">Copyright &copy; EZMoney 2016. All Rights Reserved</p>
+    </footer>
 
-    </body>
-    </html>
+</body>
+</html>
