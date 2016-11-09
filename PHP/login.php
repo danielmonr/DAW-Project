@@ -29,13 +29,13 @@ if ($result->num_rows > 0) {
         echo "id: " . $row["id"]. " - Name: " . $row["name"]. " " . $row["lastname"]. "<br>";
     }
 } else {
-    echo "0 results";
+    print ("Invalid username or password<br/>");
 }
 
 
    print ("acabo<br/>");
 
-   print (res[0]);
+   
 
 
    /*if($_SERVER["REQUEST_METHOD"] == "POST") {
