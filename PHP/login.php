@@ -20,6 +20,7 @@
    print($myusername);
    $mypassword = mysqli_real_escape_string($dbc,$_POST['password']);
    $sql = "SELECT * FROM Users WHERE email = $myusername' and password = '$mypassword'";
+   print("<br/>".$sql . "<br/>");
    $result = $dbc->query($sql);
 
 if ($result->num_rows > 0) {
