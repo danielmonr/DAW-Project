@@ -70,7 +70,7 @@ $row = $result->fetch_assoc();
             </div>
             <div class="col-sm-2 sidenav">
                 <div class="well">
-                    <p><s>Saldo</s></p>
+                    <p><b>Saldo</b></p>
                     <p>$100,000</p>
                 </div>
                 <div class="well">
