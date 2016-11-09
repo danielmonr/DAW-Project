@@ -12,7 +12,7 @@
 <body>
   <?php
     $user_id = $_SESSION['login_user'];
-    $sql = "SELECT name, lastname, email FROM Users WHERE id = $user_id";
+    $sql = "SELECT name, lastname, email, profilepic FROM Users WHERE id = $user_id";
     $result = $dbc->query($sql);
     print $user_id;
 
@@ -20,6 +20,7 @@
     print $row["name"];
     print $row["lastname"];
     print $row["email"];
+    print ("<img src='../PHP/RES/".$row["profilepic"]."'/>");
 
    ?>
 
