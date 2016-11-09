@@ -84,15 +84,16 @@
   <div class="row content">
     <div class="col-sm-2 sidenav">
         <?php
-            print ("<img src='../RES/PP/".$row["profilepic"]."' height='42' width='42' />");
+            print ("<img src='../RES/PP/".$row["profilepic"]."' height='50%' width='100%' />");
         ?>
     </div>
     <div class="col-sm-8 text-left">
       <h1>Welcome</h1>
       <?php
 
-        print $row["name"];
-        print $row["lastname"];
+        print ("<div class=\"well\">");
+        print ("<p>" . $row["name"] . " " . $row["lastname"]; . " </p>");
+        print ("</div>");
         print $row["email"];
 
        ?>
