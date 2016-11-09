@@ -37,8 +37,8 @@ $row = $result->fetch_assoc();
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="home.php">Home</a></li>
+                    <li><a href="../HTML/temp.html">Transfer</a></li>
                     <li><a href="../HTML/temp.html">About</a></li>
-                    <li><a href="../HTML/temp.html">Projects</a></li>
                     <li><a href="../HTML/temp.html">Contact</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
