@@ -73,7 +73,7 @@ $query = "INSERT INTO Users (name, lastname, password, email, profilepic) values
 $inserted = mysqli_query($dbc, $query);
 if ($inserted == 1){
   echo "Success, user registered!";
-  header("location: home.php");
+  header("location: ../HTML/login.html");
 }
 else{
   echo "Failed to register. :C";
